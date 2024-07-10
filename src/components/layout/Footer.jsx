@@ -21,7 +21,7 @@ const Footer = () => {
             className="h-5 w-auto"
           />
           <a
-            href="https://linktr.ee/Dyrane"
+            href="https://easynetsurveco.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline ml-4"

@@ -20,6 +20,5 @@ if (!rootElement._reactRootContainer) {
 		);
 	}
 
-	// Use .render() on the root to render the Main component
 	root.render(<Main />);
 }
