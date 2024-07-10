@@ -6,8 +6,8 @@ module.exports = {
 		extend: {
 			colors: {
 				primary: {
-					DEFAULT: "#2ecc71", // Primary color
-					dark: "#27ae60", // Primary color for dark mode
+					DEFAULT: "#8a2be2", // Purple color
+					dark: "#6a1b9a", // Purple color for dark mode
 				},
 				secondary: {
 					DEFAULT: "#0000ff", // Secondary color
