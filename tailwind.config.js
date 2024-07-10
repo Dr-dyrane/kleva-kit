@@ -10,8 +10,8 @@ module.exports = {
 					dark: "#27ae60", // Primary color for dark mode
 				},
 				secondary: {
-					DEFAULT: "#3498db", // Secondary color
-					dark: "#2980b9", // Secondary color for dark mode
+					DEFAULT: "#0000ff", // Secondary color
+					dark: "#001a66", // Secondary color for dark mode
 				},
 				background: {
 					DEFAULT: "#f2f5fa", // Background color
@@ -22,8 +22,8 @@ module.exports = {
 					dark: "#ffffff", // Text contrast color for dark mode
 				},
 				accent: {
-					DEFAULT: "#6dd5ed", // Accent color
-					dark: "#3a8cb7", // Accent color for dark mode
+					DEFAULT: "#ff9900", // Accent color
+					dark: "#e68300", // Accent color for dark mode
 				},
 			},
 		},
