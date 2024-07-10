@@ -97,7 +97,7 @@ To run KlevaKit locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Dr-dyrane/kleva-kit.git
+   git clone https://github.com/EASYNET-TELSURVE-CO/kleva-kit
    ```
 2. Install dependencies:
    ```bash
