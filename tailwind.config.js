@@ -15,10 +15,10 @@ module.exports = {
 				},
 				background: {
 					DEFAULT: "#f2f5fa", // Background color
-					dark: "#1a1a1a", // Background color for dark mode
+					dark: "#0d0d20", // Background color for dark mode
 				},
 				contrast: {
-					DEFAULT: "#000000", // Text contrast color
+					DEFAULT: "#0d0d20", // Text contrast color
 					dark: "#ffffff", // Text contrast color for dark mode
 				},
 				accent: {

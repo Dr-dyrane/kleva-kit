@@ -8,7 +8,7 @@ const DarkModeToggle = () => {
 	return (
 		<button
 			onClick={toggleTheme}
-			className="flex items-center justify-center p-2 rounded-full bg-gray-200 dark:bg-gray-800"
+			className="flex items-center justify-center px-2.5 rounded-full bg-gray-200 dark:bg-gray-800"
 		>
 			{isDarkMode ? (
 				<BsLightbulbFill className="text-accent-dark/75" />
