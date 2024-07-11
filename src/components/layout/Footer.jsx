@@ -74,7 +74,7 @@ const Footer = () => {
 					</div>
 					<div>
 						{/* Contact Information */}
-						<ul className="flex flex-col items-start justify-start mt-4 space-y-2 sm:space-y-4 text-xs font-medium lg:flex-row lg:space-y-0 lg:justify-center lg:space-x-4">
+						<ul className="flex flex-col items-start justify-start mt-4 space-y-2 sm:space-y-4 text-xs font-normal lg:flex-row lg:space-y-0 lg:justify-center lg:space-x-4">
 							<li className="flex items-center">
 								<MdLocationOn className="text-primary dark:text-primary-dark text-2xs" />
 								<span className="ml-1">123 Main St, Cityville, Country</span>
