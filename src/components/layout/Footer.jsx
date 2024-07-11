@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import DarkModeToggle from "../theme/DarkModeToggle";
+
 
 const Footer = () => {
 	const currentYear = new Date().getFullYear();
@@ -10,7 +12,7 @@ const Footer = () => {
 				<span className="text-xs md:text-sm sm:text-center font-light">
 					© {currentYear}{" "}
 					<Link to="/" className="hover:underline">
-						<span className="dark:text-secondary-dark text-secondary">
+						<span className="text-secondary">
 							Kleva
 						</span>
 						<span className="text-accent dark:text-accent-dark">Kit</span>™
@@ -29,8 +31,12 @@ const Footer = () => {
 						rel="noopener noreferrer"
 						className="hover:underline ml-4"
 					>
-						Designed by Dyrane.
+						Designed by Easynet.
 					</a>
+				</div>
+				<div className="flex justify-start items-center p-2">
+				<DarkModeToggle />
+
 				</div>
 				<ul className="flex flex-wrap items-center mt-3 text-sm font-medium sm:mt-0">
 					<li>

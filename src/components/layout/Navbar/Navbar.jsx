@@ -115,7 +115,7 @@ const Navbar = () => {
 		>
 			<div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 				<Link to="/" className="text-xl font-bold">
-					<span className="dark:text-secondary-dark text-secondary">Kleva</span>
+					<span className="text-secondary">Kleva</span>
 					<span className="text-accent dark:text-accent-dark">Kit</span>
 				</Link>
 				<div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -126,7 +126,7 @@ const Navbar = () => {
 						userDropdownRef={userDropdownRef}
 						userDropdownItems={userDropdownItems}
 					/>
-					<DarkModeToggle />
+					{/* <DarkModeToggle /> */}
 					<MenuButton isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
 				</div>
 				<div
