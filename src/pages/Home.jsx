@@ -8,7 +8,7 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div className='flex min-h-screen justify-center items-center scrollbar-hide'>
+    <div className='flex shadow-md min-h-screen justify-center items-center scrollbar-hide'>
       {/* <HeroSection />
       <FeaturesSection />
       <BenefitsSection />

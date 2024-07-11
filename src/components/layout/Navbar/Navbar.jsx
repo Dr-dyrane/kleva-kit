@@ -15,7 +15,7 @@ const Menu = ({ to, label }) => {
 				to={to}
 				className={`block py-2 px-3 md:p-0 ${
 					location.pathname === to
-						? "bg-accent rounded md:bg-transparent md:text-accent md:dark:text-accent-dark"
+						? "bg-accent font-medium rounded md:bg-transparent md:text-accent md:dark:text-accent-dark"
 						: "rounded font-normal hover:bg-accent/75 md:hover:bg-transparent md:hover:text-accent md:dark:hover:text-golden dark:text-warm dark:hover:bg-golden/85 dark:hover:text-warm md:dark:hover:bg-transparent dark:border-slate-700"
 				}`}
 				aria-current={location.pathname === to ? "page" : undefined}
@@ -110,11 +110,11 @@ const Navbar = () => {
 
 	return (
 		<nav
-			className="bg-background dark:bg-background-dark sticky top-0 z-50 border-b-[1px] border-slate-300 dark:border-background/15"
+			className="bg-background shadow-md dark:bg-background-dark sticky top-0 z-50 border-b-[1px] border-slate-300 dark:border-background/15"
 			style={{ opacity: navbarOpacity }}
 		>
 			<div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-				<Link to="/" className="text-xl font-bold">
+				<Link to="/" className="text-xl font-semibold">
 					<span className="text-secondary">Kleva</span>
 					<span className="text-accent dark:text-accent-dark">Kit</span>
 				</Link>

@@ -21,7 +21,7 @@ const Footer = () => {
 			<div className="w-full mx-auto max-w-screen-xl p-4 flex flex-col justify-between">
 				{/* Copyright and Logo */}
 				<div className="flex justify-between text-xs md:text-sm sm:text-center font-light">
-					<p className="py-2">
+					<p className="py-2 font-medium">
 						© {currentYear}{" "}
 						<Link to="/" className="hover:underline">
 							<span className="text-secondary">Kleva</span>
