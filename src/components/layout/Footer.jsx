@@ -36,7 +36,7 @@ const Footer = () => {
 				<div className="flex justify-start items-center p-2">
 					<DarkModeToggle />
 				</div>
-				<ul className="flex flex-wrap items-center mt-3 text-sm font-medium sm:mt-0">
+				<ul className="flex flex-wrap items-center mt-3 text-sm font-normal sm:mt-0">
 					<li>
 						<Link to="#" className="hover:underline me-4 md:me-6">
 							About
