@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./assets/index.css";
 import { AuthProvider } from "./context/AuthContext.jsx";
+import { ThemeProvider } from "./context/ThemeContext.jsx";
 
 const rootElement = document.getElementById("root");
 
@@ -14,7 +15,9 @@ if (!rootElement._reactRootContainer) {
 		return (
 			<React.StrictMode>
 				<AuthProvider>
-					<App />
+					<ThemeProvider>
+						<App />
+					</ThemeProvider>
 				</AuthProvider>
 			</React.StrictMode>
 		);

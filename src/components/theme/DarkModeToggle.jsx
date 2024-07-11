@@ -1,29 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React from "react";
 import { BsLightbulbFill, BsLightbulbOffFill } from "react-icons/bs";
+import { useTheme } from "../../context/ThemeContext";
 
 const DarkModeToggle = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+	const { isDarkMode, toggleTheme } = useTheme();
 
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [isDarkMode]);
-
-  return (
-    <button
-      onClick={() => setIsDarkMode(!isDarkMode)}
-      className="flex items-center justify-center p-2 rounded-full bg-gray-200 dark:bg-gray-800"
-    >
-      {isDarkMode ? (
-        <BsLightbulbFill className="text-accent-dark/75" />
-      ) : (
-        <BsLightbulbOffFill className="text-contrast/50" />
-      )}
-    </button>
-  );
+	return (
+		<button
+			onClick={toggleTheme}
+			className="flex items-center justify-center p-2 rounded-full bg-gray-200 dark:bg-gray-800"
+		>
+			{isDarkMode ? (
+				<BsLightbulbFill className="text-accent-dark/75" />
+			) : (
+				<BsLightbulbOffFill className="text-contrast/50" />
+			)}
+		</button>
+	);
 };
 
 export default DarkModeToggle;
