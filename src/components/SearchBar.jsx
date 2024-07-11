@@ -1,5 +1,6 @@
 import React from "react";
 import { FaSearch, FaFilter } from "react-icons/fa";
+//searhbar
 
 const SearchBar = ({ placeholder }) => {
   return (
