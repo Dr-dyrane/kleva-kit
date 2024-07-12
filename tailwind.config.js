@@ -5,7 +5,7 @@ module.exports = {
 	theme: {
 		extend: {
 			backgroundImage: {
-                'hero-pattern': "url('/hero.jpg')",}
+                'hero-pattern': "url('/hero/hero.jpg')",}
 ,			colors: {
 				primary: {
 					DEFAULT: "#8a2be2", // Purple color

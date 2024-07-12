@@ -30,7 +30,7 @@ const Footer = () => {
 					</p>
 					<div className="flex items-center text-xs font-medium">
 						<img
-							src={isDarkMode ? "/easynet.png" : "/easynet_dark.png"}
+							src={isDarkMode ? "/easynet/easynet.png" : "/easynet/easynet_dark.png"}
 							alt="Logo"
 							className="h-5 w-5"
 						/>
