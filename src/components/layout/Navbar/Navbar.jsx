@@ -13,10 +13,10 @@ const Menu = ({ to, label }) => {
 		<li>
 			<Link
 				to={to}
-				className={`block py-2 px-3 md:p-0 ${
+				className={`block py-2 md:py-0 px-3 my-1 md:my-0 md:p-0 ${
 					location.pathname === to
-						? "bg-accent text-contrast-dark font-medium rounded md:bg-transparent md:text-accent md:dark:text-accent-dark"
-						: "rounded font-normal hover:bg-accent/75 md:hover:bg-transparent md:hover:text-accent md:dark:hover:text-golden dark:text-warm dark:hover:bg-golden/85 dark:hover:text-warm md:dark:hover:bg-transparent dark:border-slate-700"
+						? "bg-accent text-contrast-dark font-medium rounded-2xl md:bg-transparent md:text-accent md:dark:text-accent-dark"
+						: "rounded-2xl font-normal hover:bg-accent/75 md:hover:bg-transparent md:hover:text-accent md:dark:hover:text-golden dark:text-warm dark:hover:bg-golden/85 dark:hover:text-warm md:dark:hover:bg-transparent dark:border-slate-700"
 				}`}
 				aria-current={location.pathname === to ? "page" : undefined}
 			>
@@ -31,7 +31,7 @@ const MenuButton = ({ isMenuOpen, toggleMenu }) => {
 		<button
 			data-collapse-toggle="navbar-cta"
 			type="button"
-			className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-accent dark:text-accent-dark rounded-lg md:hidden hover:bg-accent/10 dark:hover:bg-accent-dark/25 focus:outline-none focus:ring-2 focus:ring-accent dark:focus:ring-accent/85"
+			className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-accent dark:text-accent-dark rounded-lg md:hidden hover:bg-accent/10 dark:hover:bg-accent-dark/50 focus:outline-none focus:ring-2 focus:ring-accent dark:focus:ring-accent/85"
 			aria-controls="navbar-cta"
 			aria-expanded="false"
 			onClick={toggleMenu}
@@ -132,13 +132,13 @@ const Navbar = () => {
 				<div
 					className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${
 						isMenuOpen
-							? "block absolute right-0 top-[71px] p-4 bg-background dark:bg-background-dark rounded-b-xl opacity-95"
+							? "block absolute right-0 top-[71px] p-4 bg-background/50 dark:bg-background-dark/50 rounded-b-3xl opacity-95"
 							: "hidden"
 					}`}
 					id="navbar-cta"
 					ref={menuRef}
 				>
-					<ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-slate-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-warm dark:bg-background-dark/85 md:dark:bg-background-dark/85 dark:border-accent-dark shadow md:shadow-none">
+					<ul className="flex flex-col font-medium p-6 md:p-0 my-4 md:my-0 bg-background dark:bg-background-dark rounded-3xl md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-warm dark:bg-background-dark/85md:dark:bg-background-dark/85 shadow md:shadow-none">
 						{menuItems.map((item) => (
 							<Menu key={item.to} to={item.to} label={item.label} />
 						))}
