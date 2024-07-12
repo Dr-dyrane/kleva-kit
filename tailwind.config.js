@@ -4,7 +4,9 @@ module.exports = {
 	darkMode: "class", // Enable dark mode support
 	theme: {
 		extend: {
-			colors: {
+			backgroundImage: {
+                'hero-pattern': "url('/hero.jpg')",}
+,			colors: {
 				primary: {
 					DEFAULT: "#8a2be2", // Purple color
 					dark: "#6a1b9a", // Purple color for dark mode

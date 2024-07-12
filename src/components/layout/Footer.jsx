@@ -126,7 +126,7 @@ const Footer = () => {
 
 				{/* Newsletter Signup */}
 				<div className="mt-4 text-sm w-full lg:flex lg:justify-between lg:max-w-md lg:items-center font-thin">
-					<strong>Signup to our Newsletter</strong>
+					<strong>Join our waitlist</strong>
 					<form className="flex flex-col sm:flex-row mt-2 lg:mt-0">
 						<input
 							type="email"
