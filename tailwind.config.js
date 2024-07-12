@@ -5,7 +5,10 @@ module.exports = {
 	theme: {
 		extend: {
 			backgroundImage: {
-                'hero-pattern': "url('/hero/hero.jpg')",}
+                'hero-pattern': "url('/hero/hero.jpg')",
+				'gradient-primary-secondary': 'linear-gradient(to top right, #8a2be2, #0000ff)',
+				'gradient-primary-secondary-dark': 'linear-gradient(to top right, #6a1b9a, #001a66)'
+			}
 ,			colors: {
 				primary: {
 					DEFAULT: "#8a2be2", // Purple color

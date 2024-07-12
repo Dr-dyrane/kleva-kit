@@ -15,8 +15,8 @@ const Menu = ({ to, label }) => {
 				to={to}
 				className={`block py-2 md:py-0 px-3 my-1 md:my-0 md:p-0 ${
 					location.pathname === to
-						? "bg-accent text-contrast-dark font-medium rounded-2xl md:bg-transparent md:text-accent md:dark:text-accent-dark"
-						: "rounded-2xl font-normal hover:bg-accent/75 md:hover:bg-transparent md:hover:text-accent md:dark:hover:text-golden dark:text-warm dark:hover:bg-golden/85 dark:hover:text-warm md:dark:hover:bg-transparent dark:border-slate-700"
+						? "bg-primary text-contrast-dark font-medium rounded-2xl md:bg-transparent md:text-primary md:dark:text-primary-dark"
+						: "rounded-2xl font-normal hover:bg-primary/75 md:hover:bg-transparent md:hover:text-primary md:dark:hover:text-golden dark:text-warm dark:hover:bg-golden/85 dark:hover:text-warm md:dark:hover:bg-transparent dark:border-slate-700"
 				}`}
 				aria-current={location.pathname === to ? "page" : undefined}
 			>
@@ -31,7 +31,7 @@ const MenuButton = ({ isMenuOpen, toggleMenu }) => {
 		<button
 			data-collapse-toggle="navbar-cta"
 			type="button"
-			className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-accent dark:text-accent-dark rounded-lg md:hidden hover:bg-accent/10 dark:hover:bg-accent-dark/50 focus:outline-none focus:ring-2 focus:ring-accent dark:focus:ring-accent/85"
+			className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-primary dark:text-primary-dark rounded-lg md:hidden hover:bg-primary/10 dark:hover:bg-primary-dark/50 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary/85"
 			aria-controls="navbar-cta"
 			aria-expanded="false"
 			onClick={toggleMenu}
