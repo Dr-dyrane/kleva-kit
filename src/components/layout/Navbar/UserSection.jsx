@@ -67,7 +67,7 @@ const UserSection = ({
 				<Link to="/login">
 					<button
 						type="button"
-						className="text-white bg-secondary hover:bg-secondary/85 focus:ring-4 focus:outline-none focus:ring-secondary font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-secondary dark:hover:bg-secondary/85 dark:focus:ring-secondary"
+						className="text-contrast-dark bg-secondary hover:bg-primary/85 focus:ring-4 focus:outline-none focus:ring-secondary font-medium rounded-xl shadow-md text-sm px-4 py-2.5 text-center dark:bg-secondary dark:hover:bg-primary-dark/85 dark:focus:ring-primary"
 					>
 						Get started
 					</button>

@@ -26,7 +26,7 @@ const HeroSection = () => {
 					initial={{ y: -50, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}
 					transition={{ duration: 1 }}
-					className="text-5xl font-bold text-white"
+					className="text-5xl font-bold text-white text-left lg:text-center"
 				>
 					Revolutionize Your Business Operations!
 				</motion.h1>
@@ -34,7 +34,7 @@ const HeroSection = () => {
 					initial={{ y: 50, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}
 					transition={{ duration: 1, delay: 0.5 }}
-					className="mt-4 text-xl text-white"
+					className="mt-4 text-xl text-white text-left lg:text-center"
 				>
 					Streamline processes, boost productivity, and drive growth with our
 					all-in-one business tool.
@@ -43,18 +43,18 @@ const HeroSection = () => {
 					initial={{ y: 50, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}
 					transition={{ duration: 1, delay: 1 }}
-					className="mt-8 space-x-4"
+					className="mt-8 space-x-4 flex justify-end lg:justify-center"
 				>
 					<a
 						href="/login"
-						className="relative inline-block px-8 py-4 text-lg font-semibold text-white bg-secondary/50 rounded-lg transition duration-300 ease-in-out transform hover:bg-primary-dark/85 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-opacity-50"
+						className="relative inline-block px-8 py-4 text-lg font-semibold shadow-md text-white bg-secondary/50 rounded-xl transition duration-300 ease-in-out transform hover:bg-primary-dark/85 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-opacity-50"
 					>
 						{/* <span className="absolute inset-1 border-2 border-white rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-300"></span> */}
 						Try It Free
 					</a>
 					<a
 						href="#"
-						className="relative inline-block px-8 py-4 text-lg font-semibold text-secondary bg-white/50 rounded-lg transition duration-300 ease-in-out transform hover:bg-gray-200/85 hover:text-primary-dark focus:outline-none focus:ring-2 focus:ring-primary-dark focus:ring-offset-2 focus:ring-opacity-50"
+						className="relative inline-block px-8 py-4 text-lg font-semibold shadow-md text-secondary bg-white/50 rounded-xl transition duration-300 ease-in-out transform hover:bg-gray-200/85 hover:text-primary-dark focus:outline-none focus:ring-2 focus:ring-primary-dark focus:ring-offset-2 focus:ring-opacity-50"
 					>
 						{/* <span className="absolute inset-1 border-2 border-primary-dark rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-300"></span> */}
 						Learn More

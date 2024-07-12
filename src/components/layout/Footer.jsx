@@ -135,7 +135,7 @@ const Footer = () => {
 						/>
 						<button
 							type="submit"
-							className="p-2 bg-primary font-normal text-white rounded-lg hover:bg-opacity-80 focus:outline-none focus:bg-opacity-80"
+							className="p-2 px-3 bg-primary font-normal text-white shadow-md rounded-xl hover:bg-opacity-80 focus:outline-none focus:bg-opacity-80"
 						>
 							Subscribe
 						</button>
