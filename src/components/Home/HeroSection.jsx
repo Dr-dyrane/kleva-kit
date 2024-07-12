@@ -49,14 +49,14 @@ const HeroSection = () => {
 						href="/login"
 						className="relative inline-block px-8 py-4 text-lg font-semibold text-white bg-secondary/50 rounded-lg transition duration-300 ease-in-out transform hover:bg-primary-dark/85 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-opacity-50"
 					>
-						<span className="absolute inset-1 border-2 border-white rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-300"></span>
+						{/* <span className="absolute inset-1 border-2 border-white rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-300"></span> */}
 						Try It Free
 					</a>
 					<a
 						href="#"
 						className="relative inline-block px-8 py-4 text-lg font-semibold text-secondary bg-white/50 rounded-lg transition duration-300 ease-in-out transform hover:bg-gray-200/85 hover:text-primary-dark focus:outline-none focus:ring-2 focus:ring-primary-dark focus:ring-offset-2 focus:ring-opacity-50"
 					>
-						<span className="absolute inset-1 border-2 border-primary-dark rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-300"></span>
+						{/* <span className="absolute inset-1 border-2 border-primary-dark rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-300"></span> */}
 						Learn More
 					</a>
 				</motion.div>
