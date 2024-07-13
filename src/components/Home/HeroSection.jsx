@@ -8,10 +8,14 @@ import { useTheme } from "../../context/ThemeContext";
 const HeroSection = () => {
 	const [avatars, setAvatars] = useState([]);
 	const { isDarkMode } = useTheme();
+
 	useEffect(() => {
-		// Fetch 6 avatars for display
-		const fetchedAvatars = fetchAvatars(6);
-		setAvatars(fetchedAvatars);
+		const getAvatars = async () => {
+			const fetchedAvatars = await fetchAvatars(6);
+			setAvatars(fetchedAvatars);
+		};
+
+		getAvatars();
 	}, []);
 
 	return (
@@ -53,7 +57,9 @@ const HeroSection = () => {
 								d="M 40 0 L 0 0 0 40"
 								fill="none"
 								stroke={
-									isDarkMode ? "rgba(255, 255, 255, 0.25" : "rgba(0, 0, 0, 0.25)"
+									isDarkMode
+										? "rgba(255, 255, 255, 0.25"
+										: "rgba(0, 0, 0, 0.25)"
 								}
 								strokeWidth="0.125"
 							/>
@@ -132,9 +138,9 @@ const HeroSection = () => {
 							{avatars.map((avatar, index) => (
 								<img
 									key={index}
-									src={avatar}
+									src={avatar.url}
 									alt={`User avatar ${index + 1}`}
-									className="w-10 h-10 rounded-full border-2 border-white dark:border-gray-800 -ml-3 first:ml-0"
+									className="w-10 h-10 rounded-full border-2 border-gray-100 dark:border-gray-800 -ml-3 first:ml-0"
 								/>
 							))}
 						</div>
