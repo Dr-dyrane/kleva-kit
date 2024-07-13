@@ -115,7 +115,7 @@ const Navbar = () => {
 			<div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 				<Link to="/" className="text-xl font-semibold flex items-center justify-center">
 					<img src={'/Klevakit.png'} alt="KlevaKit Logo" className="h-6 w-6 mr-2" />
-					<span className="text-secondary">Kleva</span>
+					<span className="text-secondary dark:text-blue-500">Kleva</span>
 					<span className="text-accent dark:text-accent-dark">Kit</span>™
 				</Link>
 				<div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">

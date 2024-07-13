@@ -24,7 +24,7 @@ const Footer = () => {
 					<p className="py-2 font-medium">
 						© {currentYear}{" "}
 						<Link to="/" className="hover:underline">
-							<span className="text-secondary">Kleva</span>
+							<span className="text-secondary dark:text-blue-500">Kleva</span>
 							<span className="text-accent dark:text-accent-dark">Kit</span>™
 						</Link>
 					</p>
