@@ -19,7 +19,7 @@ const HeroSection = () => {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ duration: 1 }}
-			className="relative p-8 md:mt-8 flex flex-col md:flex-row items-start justify-between min-h-screen bg-background dark:bg-background-dark bg-cover bg-center"
+			className="relative p-8 md:mt-8 flex flex-col md:flex-row items-start justify-between min-h-[100vh] md:min-h-auto bg-background dark:bg-background-dark bg-cover bg-center"
 		>
 			{/* Here is the SVG grid pattern */}
 			<div className="absolute inset-0 z-0 overflow-hidden">
