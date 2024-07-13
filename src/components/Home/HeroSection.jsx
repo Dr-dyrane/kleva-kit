@@ -24,13 +24,14 @@ const HeroSection = () => {
 					transition={{ duration: 1 }}
 					className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-contrast dark:text-contrast-dark text-center md:text-left"
 				>
-					<span className="underline decoration-8 decoration-secondary text-secondary">Revolutionize</span> Your Business Operations
+					<span className="underline decoration-4 md:decoration-8 decoration-secondary text-secondary">Revolutionize</span> Your Business Operations
 				</motion.h1>
 				<motion.p
 					initial={{ y: 50, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}
 					transition={{ duration: 1, delay: 0.5 }}
-					className="mt-4 text-contrast/85 dark:text-contrast-dark/80 text-center md:text-left leading-7 sm:leading-8 md:leading-9 lg:leading-10 xl:leading-loose 2xl:leading-relaxed text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl"
+					className="mt-4 text-contrast/85 dark:text-contrast-dark/80 text-center md:text-left leading-7 sm:leading-8 md:leading-9
+					font-medium lg:leading-10 xl:leading-loose 2xl:leading-relaxed text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl"
 				>
 					Streamline processes, boost productivity, and drive growth with our
 					all-in-one business tool.
