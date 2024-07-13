@@ -53,9 +53,7 @@ const HeroSection = () => {
 								d="M 40 0 L 0 0 0 40"
 								fill="none"
 								stroke={
-									isDarkMode
-										? "rgba(255, 255, 255, 0.5"
-										: "rgba(0, 0, 0, 0.5)"
+									isDarkMode ? "rgba(255, 255, 255, 0.5" : "rgba(0, 0, 0, 0.5)"
 								}
 								strokeWidth="0.125"
 							/>
@@ -170,6 +168,31 @@ const HeroSection = () => {
 					</motion.div>
 				</div>
 			</div>
+			{/* Animated circle with smaller circles inside */}
+			<motion.div
+				initial={{ scale: 0, opacity: 0 }}
+				animate={{ scale: 1, opacity: 1 }}
+				transition={{ duration: 1, delay: 2 }}
+				className="absolute bottom-[50%] right-0 w-80 h-80 md:h-[600px] md:w-[600px] border-[1px] border-gray-500/50 rounded-full overflow-hidden animate-pulse"
+			>
+				<svg
+					className="w-full h-full absolute inset-0"
+					viewBox="0 0 100 100"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					{[...Array(10)].map((_, i) => (
+						<circle
+							key={i}
+							cx={Math.random() * 100}
+							cy={Math.random() * 100}
+							r={Math.random() * 8}
+							fill="transparent"
+							stroke="gray"
+							strokeWidth="0.25"
+						/>
+					))}
+				</svg>
+			</motion.div>
 		</motion.section>
 	);
 };
