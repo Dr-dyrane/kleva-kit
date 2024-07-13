@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import { BsFillMenuButtonFill, BsFillMenuButtonWideFill } from "react-icons/bs";
 import { menuItems, userDropdownItems } from "./navbarData";
 import UserSection from "./UserSection";
-import DarkModeToggle from "../../theme/DarkModeToggle";
 import { useAuth } from "../../../context/AuthContext";
 
 const Menu = ({ to, label }) => {
@@ -15,8 +14,8 @@ const Menu = ({ to, label }) => {
 				to={to}
 				className={`block py-2 md:py-0 px-3 my-1 md:my-0 md:p-0 ${
 					location.pathname === to
-						? "bg-primary text-contrast-dark font-medium rounded-2xl md:bg-transparent md:text-primary md:dark:text-primary-dark"
-						: "rounded-2xl font-normal hover:text-contrast-dark hover:bg-primary/75 md:hover:bg-transparent md:hover:text-primary md:dark:hover:text-golden dark:text-warm dark:hover:bg-golden/85 dark:hover:text-warm md:dark:hover:bg-transparent dark:border-slate-700"
+						? "bg-primary text-contrast-dark font-medium rounded-2xl md:bg-transparent md:text-secondary"
+						: "rounded-2xl font-normal hover:text-secondary hover:bg-primary/75 md:hover:bg-transparent dark:md:hover:text-secondary dark:hover:text-contrast-dark md:dark:hover:bg-transparent dark:border-slate-700"
 				}`}
 				aria-current={location.pathname === to ? "page" : undefined}
 			>
@@ -31,7 +30,7 @@ const MenuButton = ({ isMenuOpen, toggleMenu }) => {
 		<button
 			data-collapse-toggle="navbar-cta"
 			type="button"
-			className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-primary dark:text-primary-dark rounded-lg md:hidden hover:bg-primary/10 dark:hover:bg-primary-dark/50 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary/85"
+			className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-primary rounded-lg md:hidden hover:bg-primary/10 dark:hover:bg-primary-dark/50 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary/85"
 			aria-controls="navbar-cta"
 			aria-expanded="false"
 			onClick={toggleMenu}
@@ -114,7 +113,8 @@ const Navbar = () => {
 			style={{ opacity: navbarOpacity }}
 		>
 			<div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-				<Link to="/" className="text-xl font-semibold">
+				<Link to="/" className="text-xl font-semibold flex items-center justify-center">
+					<img src={'/Klevakit.png'} alt="KlevaKit Logo" className="h-6 w-6 mr-2" />
 					<span className="text-secondary">Kleva</span>
 					<span className="text-accent dark:text-accent-dark">Kit</span>™
 				</Link>
