@@ -4,29 +4,29 @@ import { VitePWA } from "vite-plugin-pwa";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [
-		react(),
-		VitePWA({
-			registerType: "autoUpdate",
-			includeAssets: ["favicon.ico", "robots.txt", "apple-touch-icon.png"],
-			manifest: {
-				name: "KlevaKit",
-				short_name: "KlevaKit",
-				description: "Revolutionize Your Business Operations",
-				theme_color: "#ffffff",
-				icons: [
-					{
-						src: "pwa-192x192.png",
-						sizes: "192x192",
-						type: "image/png",
-					},
-					{
-						src: "pwa-512x512.png",
-						sizes: "512x512",
-						type: "image/png",
-					},
-				],
-			},
-		}),
-	],
+        plugins: [
+                react(),
+                VitePWA({
+                        registerType: "autoUpdate",
+                        includeAssets: ["Klevakit.png"], // Update this array to include only existing assets
+                        manifest: {
+                                name: "KlevaKit",
+                                short_name: "KlevaKit",
+                                description: "Revolutionize Your Business Operations",
+                                theme_color: "#ffffff",
+                                icons: [
+                                        {
+                                                src: "Klevakit.png",
+                                                sizes: "192x192",
+                                                type: "image/png",
+                                        },
+                                        {
+                                                src: "Klevakit.png",
+                                                sizes: "512x512",
+                                                type: "image/png",
+                                        },
+                                ],
+                        },
+                }),
+        ],
 });
