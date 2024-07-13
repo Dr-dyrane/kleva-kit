@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { fetchAvatars } from "../../utils/avatarFetcher";
 import { FaCheckCircle } from "react-icons/fa";
+import { MdStar, MdStarHalf, MdStarBorder } from "react-icons/md";
 
 const HeroSection = () => {
 	const [avatars, setAvatars] = useState([]);
@@ -11,6 +12,24 @@ const HeroSection = () => {
 		const fetchedAvatars = fetchAvatars(6);
 		setAvatars(fetchedAvatars);
 	}, []);
+
+	const renderStars = (rating) => {
+		const fullStars = Math.floor(rating);
+		const halfStar = rating % 1 !== 0;
+		const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+
+		return (
+			<div className="flex items-center space-x-1">
+				{[...Array(fullStars)].map((_, index) => (
+					<MdStar key={index} className="text-yellow-500" />
+				))}
+				{halfStar && <MdStarHalf className="text-yellow-500" />}
+				{[...Array(emptyStars)].map((_, index) => (
+					<MdStarBorder key={index} className="text-yellow-500" />
+				))}
+			</div>
+		);
+	};
 
 	return (
 		<motion.section
@@ -40,7 +59,7 @@ const HeroSection = () => {
 					Streamline processes, boost productivity, and drive growth with our
 					all-in-one business tool.
 				</motion.p>
-				<div className="mt-4 space-y-4">
+				<div className="mt-4 space-y-4 font-normal">
 					<motion.div
 						initial={{ y: 50, opacity: 0 }}
 						animate={{ y: 0, opacity: 1 }}
@@ -58,7 +77,7 @@ const HeroSection = () => {
 						transition={{ duration: 1, delay: 0.9 }}
 						className="flex items-center space-x-2"
 					>
-						<FaCheckCircle className="text-secondary" />
+						<FaCheckCircle className="text-primary" />
 						<span className="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
 							Analyze performance with advanced metrics.
 						</span>
@@ -69,7 +88,7 @@ const HeroSection = () => {
 						transition={{ duration: 1, delay: 1.1 }}
 						className="flex items-center space-x-2"
 					>
-						<FaCheckCircle className="text-secondary" />
+						<FaCheckCircle className="text-accent" />
 						<span className="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
 							Create effective marketing strategies effortlessly.
 						</span>
@@ -94,9 +113,12 @@ const HeroSection = () => {
 							))}
 						</div>
 
-						<span className="mt-6 md:ml-4 md:mt-0 text-contrast dark:text-contrast-dark">
-							Join other happy users!
-						</span>
+						<div className="mt-6 md:ml-4 md:mt-0 flex flex-col items-center">
+							{renderStars(4.5)}
+							<span className="text-contrast font-light dark:text-contrast-dark mt-2">
+								1,234 happy users!
+							</span>
+						</div>
 					</motion.div>
 
 					<motion.div
@@ -120,7 +142,17 @@ const HeroSection = () => {
 					</motion.div>
 				</div>
 			</div>
-			<div className="w-100 h-100">image</div>
+			<div className="w-40 h-40 absolute top-0 right-0">
+				<motion.div
+					initial={{ scale: 0.8, opacity: 0 }}
+					animate={{ scale: 1, opacity: 1 }}
+					transition={{ duration: 1.5 }}
+					className=" w-full h-full bg-no-repeat bg-contain"
+					style={{
+						backgroundImage: "url('/path/to/abstract-image.png')",
+					}}
+				></motion.div>
+			</div>
 		</motion.section>
 	);
 };
