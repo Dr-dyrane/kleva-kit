@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { fetchAvatars } from "../../utils/avatarFetcher";
 import { FaCheckCircle } from "react-icons/fa";
-import { MdStar, MdStarHalf, MdStarBorder } from "react-icons/md";
+import StarRating from "../common/StarRating";
 
 const HeroSection = () => {
 	const [avatars, setAvatars] = useState([]);
@@ -12,24 +12,6 @@ const HeroSection = () => {
 		const fetchedAvatars = fetchAvatars(6);
 		setAvatars(fetchedAvatars);
 	}, []);
-
-	const renderStars = (rating) => {
-		const fullStars = Math.floor(rating);
-		const halfStar = rating % 1 !== 0;
-		const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
-
-		return (
-			<div className="flex items-center space-x-1">
-				{[...Array(fullStars)].map((_, index) => (
-					<MdStar key={index} className="text-yellow-500" />
-				))}
-				{halfStar && <MdStarHalf className="text-yellow-500" />}
-				{[...Array(emptyStars)].map((_, index) => (
-					<MdStarBorder key={index} className="text-yellow-500" />
-				))}
-			</div>
-		);
-	};
 
 	return (
 		<motion.section
@@ -114,7 +96,7 @@ const HeroSection = () => {
 						</div>
 
 						<div className="mt-6 md:ml-4 md:mt-0 flex flex-col items-center">
-							{renderStars(4.5)}
+							<StarRating rating={4.5} />
 							<span className="text-contrast font-light dark:text-contrast-dark mt-2">
 								1,234 happy users!
 							</span>

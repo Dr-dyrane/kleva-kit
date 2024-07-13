@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import SpinningLoader from "../components/Loader"; // Adjust the path as necessary
+import SpinningLoader from "../components/common/Loader"; // Adjust the path as necessary
 
 const AuthContext = createContext();
 
