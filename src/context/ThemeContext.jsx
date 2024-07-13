@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 
-// Create a context with a default value of false for light mode
 const ThemeContext = createContext({
 	isDarkMode: false,
 	toggleTheme: () => {},
@@ -18,31 +17,29 @@ export const ThemeProvider = ({ children }) => {
 
 		if (storedTheme === "dark" || (!storedTheme && prefersDarkScheme)) {
 			setIsDarkMode(true);
-			document.documentElement.classList.add("dark"); // Add dark class
 		}
 	}, []);
+
+	// Update theme color in meta tag
+	useEffect(() => {
+		const themeColorMetaTag = document.getElementById("theme-color");
+		if (isDarkMode) {
+			document.documentElement.classList.add("dark");
+			themeColorMetaTag.setAttribute("content", "#0d0d20"); // Dark mode color
+		} else {
+			document.documentElement.classList.remove("dark");
+			themeColorMetaTag.setAttribute("content", "#F2F5FA"); // Light mode color
+		}
+	}, [isDarkMode]);
 
 	// Toggle theme and update localStorage
 	const toggleTheme = () => {
 		setIsDarkMode((prevMode) => {
 			const newMode = !prevMode;
 			localStorage.setItem("theme", newMode ? "dark" : "light");
-			if (newMode) {
-				document.documentElement.classList.add("dark"); // Add dark class
-			} else {
-				document.documentElement.classList.remove("dark"); // Remove dark class
-			}
 			return newMode;
 		});
 	};
-
-	useEffect(() => {
-		if (isDarkMode) {
-			document.documentElement.classList.add("dark");
-		} else {
-			document.documentElement.classList.remove("dark");
-		}
-	}, [isDarkMode]);
 
 	return (
 		<ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
