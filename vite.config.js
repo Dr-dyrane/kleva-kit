@@ -13,7 +13,7 @@ export default defineConfig({
                                 name: "KlevaKit",
                                 short_name: "KlevaKit",
                                 description: "Revolutionize Your Business Operations",
-                                theme_color: "#ffffff",
+                                theme_color: "#F2F5FA",
                                 icons: [
                                         {
                                                 src: "Klevakit.png",
