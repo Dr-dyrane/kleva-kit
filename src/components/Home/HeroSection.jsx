@@ -3,10 +3,11 @@ import { motion } from "framer-motion";
 import { fetchAvatars } from "../../utils/avatarFetcher";
 import { FaCheckCircle } from "react-icons/fa";
 import StarRating from "../common/StarRating";
+import { useTheme } from "../../context/ThemeContext";
 
 const HeroSection = () => {
 	const [avatars, setAvatars] = useState([]);
-
+	const { isDarkMode } = useTheme();
 	useEffect(() => {
 		// Fetch 6 avatars for display
 		const fetchedAvatars = fetchAvatars(6);
@@ -20,6 +21,51 @@ const HeroSection = () => {
 			transition={{ duration: 1 }}
 			className="relative p-8 md:mt-8 flex flex-col md:flex-row items-start justify-between min-h-screen bg-background dark:bg-background-dark bg-cover bg-center"
 		>
+			{/* Here is the SVG grid pattern */}
+			<div className="absolute inset-0 z-0 overflow-hidden">
+				<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+					<defs>
+						<pattern
+							id="smallGrid"
+							width="10"
+							height="10"
+							patternUnits="userSpaceOnUse"
+						>
+							<path
+								d="M 8 0 L 0 0 0 8"
+								fill="none"
+								stroke={
+									isDarkMode
+										? "rgba(255, 255, 255, 0.125)"
+										: "rgba(0, 0, 0, 0.125)"
+								}
+								strokeWidth="0.125"
+							/>
+						</pattern>
+						<pattern
+							id="grid"
+							width="40"
+							height="40"
+							patternUnits="userSpaceOnUse"
+						>
+							<rect width="100%" height="100%" fill="url(#smallGrid)" />
+							<path
+								d="M 40 0 L 0 0 0 40"
+								fill="none"
+								stroke={
+									isDarkMode
+										? "rgba(255, 255, 255, 0.5"
+										: "rgba(0, 0, 0, 0.5)"
+								}
+								strokeWidth="0.125"
+							/>
+						</pattern>
+					</defs>
+
+					<rect width="100%" height="100%" fill="url(#grid)" />
+				</svg>
+			</div>
+			{/* End of SVG grid pattern */}
 			<div className="relative z-10 text-center flex flex-col justify-center md:justify-between space-y-10 md:space-y-16 lg:space-y-20 flex-grow">
 				<motion.h1
 					initial={{ y: -50, opacity: 0 }}
@@ -123,17 +169,6 @@ const HeroSection = () => {
 						</a>
 					</motion.div>
 				</div>
-			</div>
-			<div className="w-40 h-40 absolute top-0 right-0">
-				<motion.div
-					initial={{ scale: 0.8, opacity: 0 }}
-					animate={{ scale: 1, opacity: 1 }}
-					transition={{ duration: 1.5 }}
-					className=" w-full h-full bg-no-repeat bg-contain"
-					style={{
-						backgroundImage: "url('/path/to/abstract-image.png')",
-					}}
-				></motion.div>
 			</div>
 		</motion.section>
 	);
