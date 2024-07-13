@@ -36,7 +36,7 @@ const HeroSection = () => {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ duration: 1 }}
-			className="relative p-8 flex flex-col md:flex-row items-center justify-between min-h-screen bg-background dark:bg-background-dark bg-cover bg-center"
+			className="relative p-8 md:mt-8 flex flex-col md:flex-row items-start justify-between min-h-screen bg-background dark:bg-background-dark bg-cover bg-center"
 		>
 			<div className="relative z-10 text-center flex flex-col justify-center md:justify-between space-y-10 md:space-y-16 lg:space-y-20 flex-grow">
 				<motion.h1
