@@ -1,13 +1,36 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { fetchAvatars } from "../../utils/avatarFetcher";
+import { fetchAvatars } from "../../../utils/avatarFetcher";
 import { FaCheckCircle } from "react-icons/fa";
-import StarRating from "../common/StarRating";
-import { useTheme } from "../../context/ThemeContext";
+import StarRating from "../../common/StarRating";
+import { useTheme } from "../../../context/ThemeContext";
+import JoinWaitingListModal from "./JoinWaitingListModal";
+import CongratulationSplashScreen from "./CongratulationSplashScreen";
 
 const HeroSection = () => {
 	const [avatars, setAvatars] = useState([]);
 	const { isDarkMode } = useTheme();
+
+	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [isCongratulationVisible, setIsCongratulationVisible] = useState(false);
+
+	const handleJoinClick = () => {
+		setIsModalOpen(true);
+	};
+
+	const handleModalClose = () => {
+		setIsModalOpen(false);
+	};
+
+	const handleCongratulationClose = () => {
+		setIsCongratulationVisible(false);
+	};
+
+	const handleEmailSubmit = (email) => {
+		console.log("Email submitted:", email);
+		setIsModalOpen(false);
+		setIsCongratulationVisible(true);
+	};
 
 	useEffect(() => {
 		const getAvatars = async () => {
@@ -171,7 +194,7 @@ const HeroSection = () => {
 						className="space-y-4 md:space-y-0 md:space-x-4 flex flex-col md:flex-row md:justify-start mt-8 md:mt-0 w-full"
 					>
 						<a
-							href="/login"
+							onClick={handleJoinClick}
 							className="relative inline-block px-8 py-4 md:text-lg font-semibold shadow-lg text-contrast-dark bg-secondary/75 rounded-xl transition duration-300 ease-in-out transform hover:bg-primary/75 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-opacity-50"
 						>
 							JOIN NOW FOR FREE
@@ -210,6 +233,16 @@ const HeroSection = () => {
 					))}
 				</svg>
 			</motion.div>
+			{isModalOpen && (
+				<JoinWaitingListModal
+					onClose={handleModalClose}
+					onSubmit={handleEmailSubmit}
+				/>
+			)}
+
+			{isCongratulationVisible && (
+				<CongratulationSplashScreen onClose={handleCongratulationClose} />
+			)}
 		</motion.section>
 	);
 };

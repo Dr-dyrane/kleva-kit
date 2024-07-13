@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroSection from '../components/Home/HeroSection';
+import HeroSection from '../components/Home/Hero/HeroSection';
 // import FeaturesSection from '../components/Home/FeaturesSection';
 // import BenefitsSection from '../components/Home/BenefitsSection';
 // import PricingSection from '../components/Home/PricingSection';
