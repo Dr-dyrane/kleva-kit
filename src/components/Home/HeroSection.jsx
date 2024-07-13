@@ -1,7 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { fetchAvatars } from "../../utils/avatarFetcher";
 
 const HeroSection = () => {
+	const [avatars, setAvatars] = useState([]);
+
+	useEffect(() => {
+		// Fetch 5 avatars for display
+		const fetchedAvatars = fetchAvatars(5);
+		setAvatars(fetchedAvatars);
+	}, []);
 	return (
 		<motion.section
 			initial={{ opacity: 0 }}
@@ -15,7 +23,7 @@ const HeroSection = () => {
 					initial={{ y: -50, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}
 					transition={{ duration: 1 }}
-					className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-contrast dark:text-contrast-dark text-left"
+					className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-contrast dark:text-contrast-dark text-center md:text-left"
 				>
 					Revolutionize Your Business Operations!
 				</motion.h1>
@@ -23,7 +31,7 @@ const HeroSection = () => {
 					initial={{ y: 50, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}
 					transition={{ duration: 1, delay: 0.5 }}
-					className="mt-4 text-contrast/85 dark:text-contrast-dark/80 text-left leading-7 sm:leading-8 md:leading-9 lg:leading-10 xl:leading-loose 2xl:leading-relaxed text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl"
+					className="mt-4 text-contrast/85 dark:text-contrast-dark/80 text-center md:text-left leading-7 sm:leading-8 md:leading-9 lg:leading-10 xl:leading-loose 2xl:leading-relaxed text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl"
 				>
 					Streamline processes, boost productivity, and drive growth with our
 					all-in-one business tool. Enhance your brand, analyze performance, and
@@ -48,6 +56,24 @@ const HeroSection = () => {
 					>
 						LEARN MORE
 					</a>
+				</motion.div>
+				<motion.div
+					initial={{ y: 50, opacity: 0 }}
+					animate={{ y: 0, opacity: 1 }}
+					transition={{ duration: 1, delay: 1.5 }}
+					className="relative z-10 flex flex-col md:flex-row items-center mt-8 space-x-2"
+				><div className="flex flex-row">	{avatars.map((avatar, index) => (
+					<img
+						key={index}
+						src={avatar}
+						alt={`User avatar ${index + 1}`}
+						className="w-10 h-10 rounded-full border-2 border-white -ml-2 first:ml-0"
+					/>
+				))}</div>
+				
+					<span className="mt-4 md:ml-4 md:mt-0 text-contrast dark:text-contrast-dark">
+						Join other happy users!
+					</span>
 				</motion.div>
 			</div>
 		</motion.section>
