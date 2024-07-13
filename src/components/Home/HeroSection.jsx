@@ -125,6 +125,17 @@ const HeroSection = () => {
 							Create effective marketing strategies effortlessly.
 						</span>
 					</motion.div>
+					<motion.div
+						initial={{ y: 50, opacity: 0 }}
+						animate={{ y: 0, opacity: 1 }}
+						transition={{ duration: 1, delay: 1.3 }}
+						className="flex items-center space-x-2"
+					>
+						<FaCheckCircle className="text-contrast dark:text-contrast-dark" />
+						<span className="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
+							Develop professional pitch decks with ease.
+						</span>
+					</motion.div>
 				</div>
 
 				<div className="flex flex-col md:flex-row justify-center items-center">
