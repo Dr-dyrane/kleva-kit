@@ -12,7 +12,7 @@ const HeroSection = () => {
 	const { isDarkMode } = useTheme();
 
 	const [isModalOpen, setIsModalOpen] = useState(false);
-	const [isCongratulationVisible, setIsCongratulationVisible] = useState(true);
+	const [isCongratulationVisible, setIsCongratulationVisible] = useState(false);
 
 	const handleJoinClick = () => {
 		setIsModalOpen(true);
