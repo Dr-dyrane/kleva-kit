@@ -1,12 +1,21 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { sendEmail } from "../../../utils/emailUtils";
 
 const JoinWaitingListModal = ({ onClose, onSubmit }) => {
 	const [email, setEmail] = useState("");
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-		onSubmit(email);
+
+		try {
+			await sendEmail(email); // Call the utility function to send email
+			console.log("Email submitted:", email);
+			onSubmit(email); // Handle successful submission
+		} catch (error) {
+			console.error("Error submitting email:", error);
+			// Handle error state in UI if necessary
+		}
 	};
 
 	return (
@@ -33,7 +42,7 @@ const JoinWaitingListModal = ({ onClose, onSubmit }) => {
 						placeholder="Enter your email"
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
-						className="p-2 border font-light rounded-lg dark:text-gray-300"
+						className="p-2 border font-light rounded-lg text-contrast"
 						required
 					/>
 					<button
