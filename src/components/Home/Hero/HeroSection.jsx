@@ -82,7 +82,7 @@ const HeroSection = () => {
 								stroke={
 									isDarkMode
 										? "rgba(255, 255, 255, 0.25"
-										: "rgba(0, 0, 0, 0.25)"
+										: "rgba(13, 13, 32, 0.25)"
 								}
 								strokeWidth="0.125"
 							/>
