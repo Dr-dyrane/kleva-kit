@@ -1,6 +1,6 @@
 import React from 'react';
 import HeroSection from '../components/Home/Hero/HeroSection';
-// import FeaturesSection from '../components/Home/FeaturesSection';
+import FeaturesSection from '../components/Home/Features/FeaturesSection';
 // import BenefitsSection from '../components/Home/BenefitsSection';
 // import PricingSection from '../components/Home/PricingSection';
 // import TestimonialsSection from '../components/Home/TestimonialsSection';
@@ -10,7 +10,8 @@ const Home = () => {
   return (
     <div className='shadow-md min-h-screen justify-center items-center scrollbar-hide'>
       <HeroSection />
-      {/* <FeaturesSection />
+      <FeaturesSection />
+      {/*
       <BenefitsSection />
       <PricingSection />
       <TestimonialsSection />
