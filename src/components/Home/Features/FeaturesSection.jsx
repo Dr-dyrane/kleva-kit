@@ -74,7 +74,6 @@ const containerVariants = {
 
 // Main features section
 export default function FeaturesSection() {
-
 	return (
 		<section className="py-24 bg-background dark:bg-background-dark text-gray-900 dark:text-white transition-colors duration-300 overflow-hidden">
 			<div className="container mx-auto px-4">
@@ -142,12 +141,15 @@ function FeatureItem({ title, description, gradient, icon, delay }) {
 			</div>
 			<div
 				className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-xl`}
-			>
-			</div>
+			></div>
 			<div
 				className={`absolute inset-0 opacity-100 transition-opacity duration-300 rounded-xl`}
 			>
-				<img src={isDarkMode? Vector: Vector_dark} alt="" className="w-full"/>
+				<img
+					src={isDarkMode ? Vector : Vector_dark}
+					alt=""
+					className="w-full"
+				/>
 			</div>
 		</motion.div>
 	);
