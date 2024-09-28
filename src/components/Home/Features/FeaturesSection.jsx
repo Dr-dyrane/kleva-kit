@@ -12,7 +12,7 @@ const features = [
 		title: "Business Brand Generator",
 		description:
 			"Create a distinctive brand identity with our AI-powered generator.",
-		gradient: "from-blue-400 to-indigo-600",
+		gradient: "from-blue-200 to-indigo-600",
 		icon: brand,
 		delay: 0.2,
 	},
@@ -20,7 +20,7 @@ const features = [
 		title: "Landing Page Maker",
 		description:
 			"Build high-converting landing pages with drag-and-drop simplicity.",
-		gradient: "from-green-400 to-emerald-600",
+		gradient: "from-green-300 to-emerald-600",
 		icon: page,
 		delay: 0.4,
 	},
@@ -28,7 +28,7 @@ const features = [
 		title: "Business Analytics",
 		description:
 			"Gain actionable insights with our advanced AI-driven analytics platform.",
-		gradient: "from-purple-400 to-fuchsia-600",
+		gradient: "from-purple-300 to-fuchsia-600",
 		icon: analytics,
 		delay: 0.6,
 	},
@@ -44,7 +44,7 @@ const features = [
 		title: "Video Content Creator",
 		description:
 			"Produce engaging marketing and social media videos effortlessly.",
-		gradient: "from-yellow-400 to-amber-600",
+		gradient: "from-yellow-200 to-amber-600",
 		icon: video,
 		delay: 1.0,
 	},
@@ -52,7 +52,7 @@ const features = [
 		title: "No-Code Website Design",
 		description:
 			"Design professional websites with our intuitive no-code platform.",
-		gradient: "from-cyan-400 to-teal-600",
+		gradient: "from-cyan-300 to-teal-600",
 		icon: web,
 		delay: 1.2,
 	},
@@ -78,7 +78,7 @@ export default function FeaturesSection() {
 					initial={{ opacity: 0, y: -20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.8 }}
-					className="text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 leading-tight"
+					className="text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary leading-tight"
 				>
 					Empower Your Business with Cutting-Edge Features
 				</motion.h2>
@@ -116,9 +116,13 @@ function FeatureItem({ title, description, gradient, icon, delay }) {
 	return (
 		<motion.div
 			variants={itemVariants}
+			initial={{ scale: 1 }} // Initial scale state
+			whileHover={{ scale: 1.05 }} // Smooth scale effect on hover
+			transition={{ duration: 0.1 }} // Smooth transition
 			className={`bg-background dark:bg-background-dark rounded-3xl p-6 shadow-xl transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl overflow-hidden group`}
 			style={{ transformStyle: "preserve-3d" }}
 		>
+
 			<div className="relative z-10">
 				<div
 					className={`flex h-16 w-16 rounded-full mb-6 bg-gradient-to-br ${gradient} flex items-center justify-center transform transition-transform duration-300 group-hover:scale-110`}

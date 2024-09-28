@@ -100,7 +100,7 @@ const HeroSection = () => {
 					transition={{ duration: 1 }}
 					className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-contrast dark:text-contrast-dark text-center md:text-left"
 				>
-					<span className="underline decoration-4 md:decoration-8 decoration-secondary text-secondary">
+					<span className="underline decoration-4 md:decoration-8 decoration-secondary text-secondary hover:decoration-accent">
 						Revolutionize
 					</span>{" "}
 					Your Business Operations
@@ -201,7 +201,7 @@ const HeroSection = () => {
 						</a>
 						<a
 							href="#"
-							className="relative border border-contrast dark:border-contrast-dark hover:border-none inline-block px-8 py-4 md:text-lg font-semibold shadow-lg text-contrast dark:text-contrast-dark bg-transparent rounded-xl transition duration-300 ease-in-out transform hover:bg-gray-200/75 hover:text-primary-dark dark:hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary-dark focus:ring-offset-2 focus:ring-opacity-50"
+							className="relative border border-contrast dark:border-contrast-dark hover:border-primary inline-block px-8 py-4 md:text-lg font-semibold shadow-lg text-contrast dark:text-contrast-dark bg-transparent rounded-xl transition duration-300 ease-in-out transform hover:text-primary-dark dark:hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary-dark focus:ring-offset-2 focus:ring-opacity-50"
 						>
 							LEARN MORE
 						</a>
