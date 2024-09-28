@@ -60,7 +60,7 @@ const containerVariants = {
 // Main features section
 export default function FeaturesSection() {
 	return (
-		<section className="py-24 bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300 overflow-hidden">
+		<section className="py-24 bg-background dark:bg-background-dark text-gray-900 dark:text-white transition-colors duration-300 overflow-hidden">
 			<div className="container mx-auto px-4">
 				<motion.h2
 					initial={{ opacity: 0, y: -20 }}
@@ -104,7 +104,7 @@ function FeatureItem({ title, description, gradient, delay }) {
 	return (
 		<motion.div
 			variants={itemVariants}
-			className={`bg-gray-100 dark:bg-gray-800 rounded-3xl p-6 shadow-xl transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl overflow-hidden group`}
+			className={`bg-background dark:bg-background-dark rounded-3xl p-6 shadow-xl transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl overflow-hidden group`}
 			style={{ transformStyle: "preserve-3d" }}
 		>
 			<div className="relative z-10">
