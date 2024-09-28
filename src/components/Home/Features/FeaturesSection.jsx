@@ -1,5 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import brand from "./images/brand.svg";
+import page from "./images/page.svg";
+import analytics from "./images/analytics.svg";
+import pitch from "./images/pitch.svg";
+import video from "./images/video.svg";
+import web from "./images/web.svg";
 
 const features = [
 	{
@@ -7,6 +13,7 @@ const features = [
 		description:
 			"Create a distinctive brand identity with our AI-powered generator.",
 		gradient: "from-blue-400 to-indigo-600",
+		icon: brand,
 		delay: 0.2,
 	},
 	{
@@ -14,6 +21,7 @@ const features = [
 		description:
 			"Build high-converting landing pages with drag-and-drop simplicity.",
 		gradient: "from-green-400 to-emerald-600",
+		icon: page,
 		delay: 0.4,
 	},
 	{
@@ -21,6 +29,7 @@ const features = [
 		description:
 			"Gain actionable insights with our advanced AI-driven analytics platform.",
 		gradient: "from-purple-400 to-fuchsia-600",
+		icon: analytics,
 		delay: 0.6,
 	},
 	{
@@ -28,6 +37,7 @@ const features = [
 		description:
 			"Craft compelling pitch decks with dynamic, data-driven templates.",
 		gradient: "from-red-400 to-rose-600",
+		icon: pitch,
 		delay: 0.8,
 	},
 	{
@@ -35,6 +45,7 @@ const features = [
 		description:
 			"Produce engaging marketing and social media videos effortlessly.",
 		gradient: "from-yellow-400 to-amber-600",
+		icon: video,
 		delay: 1.0,
 	},
 	{
@@ -42,6 +53,7 @@ const features = [
 		description:
 			"Design professional websites with our intuitive no-code platform.",
 		gradient: "from-cyan-400 to-teal-600",
+		icon: web,
 		delay: 1.2,
 	},
 ];
@@ -100,7 +112,7 @@ const itemVariants = {
 };
 
 // Individual feature item component
-function FeatureItem({ title, description, gradient, delay }) {
+function FeatureItem({ title, description, gradient, icon, delay }) {
 	return (
 		<motion.div
 			variants={itemVariants}
@@ -109,11 +121,9 @@ function FeatureItem({ title, description, gradient, delay }) {
 		>
 			<div className="relative z-10">
 				<div
-					className={`h-16 w-16 rounded-full mb-6 bg-gradient-to-br ${gradient} flex items-center justify-center transform transition-transform duration-300 group-hover:scale-110`}
+					className={`flex h-16 w-16 rounded-full mb-6 bg-gradient-to-br ${gradient} flex items-center justify-center transform transition-transform duration-300 group-hover:scale-110`}
 				>
-					<span className="text-2xl font-medium text-white">
-						{title.charAt(0)}
-					</span>
+					<img src={icon} className="w-auto  object-cover h-10" />
 				</div>
 				<h3 className="text-2xl font-medium mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-gray-900 dark:group-hover:from-white group-hover:to-gray-600 dark:group-hover:to-gray-300 transition-all duration-300">
 					{title}
