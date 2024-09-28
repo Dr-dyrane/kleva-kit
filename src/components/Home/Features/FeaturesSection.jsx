@@ -7,6 +7,8 @@ import pitch from "./images/pitch.svg";
 import video from "./images/video.svg";
 import web from "./images/web.svg";
 import Vector from "./images/Vector.png";
+import Vector_dark from "./images/Vector_dark.png";
+import { useTheme } from "../../../context/ThemeContext";
 
 const features = [
 	{
@@ -72,6 +74,7 @@ const containerVariants = {
 
 // Main features section
 export default function FeaturesSection() {
+
 	return (
 		<section className="py-24 bg-background dark:bg-background-dark text-gray-900 dark:text-white transition-colors duration-300 overflow-hidden">
 			<div className="container mx-auto px-4">
@@ -79,7 +82,7 @@ export default function FeaturesSection() {
 					initial={{ opacity: 0, y: -20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.8 }}
-					className="text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary leading-tight"
+					className="text-5xl lg:text-6xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary leading-tight"
 				>
 					Empower Your Business with Cutting-Edge Features
 				</motion.h2>
@@ -87,7 +90,7 @@ export default function FeaturesSection() {
 					variants={containerVariants}
 					initial="hidden"
 					animate="visible"
-					className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+					className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
 				>
 					{features.map((feature, index) => (
 						<FeatureItem key={index} {...feature} />
@@ -114,13 +117,14 @@ const itemVariants = {
 
 // Individual feature item component
 function FeatureItem({ title, description, gradient, icon, delay }) {
+	const { isDarkMode } = useTheme();
 	return (
 		<motion.div
 			variants={itemVariants}
 			initial={{ scale: 1 }} // Initial scale state
 			whileHover={{ scale: 1.05 }} // Smooth scale effect on hover
 			transition={{ duration: 0.1 }} // Smooth transition
-			className={`bg-background dark:bg-background-dark rounded-3xl p-6 shadow-xl transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl overflow-hidden group`}
+			className={`bg-background dark:bg-background-dark rounded-3xl p-6 xl:p-8 xl:py-10 shadow-xl transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl overflow-hidden group`}
 			style={{ transformStyle: "preserve-3d" }}
 		>
 			<div className="relative z-10">
@@ -129,10 +133,10 @@ function FeatureItem({ title, description, gradient, icon, delay }) {
 				>
 					<img src={icon} className="w-auto  object-cover h-10" />
 				</div>
-				<h3 className="text-2xl font-medium mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-gray-900 dark:group-hover:from-white group-hover:to-gray-600 dark:group-hover:to-gray-300 transition-all duration-300">
+				<h3 className="text-xl md:text-2xl xl:text-3xl font-medium mb-3 lg:mb-6 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-gray-900 dark:group-hover:from-white group-hover:to-gray-600 dark:group-hover:to-gray-300 transition-all duration-300">
 					{title}
 				</h3>
-				<p className="text-gray-700 dark:text-gray-300 leading-relaxed font-light">
+				<p className="text-gray-700 dark:text-gray-300 leading-relaxed font-light text-base lg:text-lg xl:text-xl 2xl:text-2xl">
 					{description}
 				</p>
 			</div>
@@ -143,7 +147,7 @@ function FeatureItem({ title, description, gradient, icon, delay }) {
 			<div
 				className={`absolute inset-0 opacity-100 transition-opacity duration-300 rounded-xl`}
 			>
-				<img src={Vector} alt="" className="w-full"/>
+				<img src={isDarkMode? Vector: Vector_dark} alt="" className="w-full"/>
 			</div>
 		</motion.div>
 	);
