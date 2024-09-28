@@ -6,6 +6,7 @@ import analytics from "./images/analytics.svg";
 import pitch from "./images/pitch.svg";
 import video from "./images/video.svg";
 import web from "./images/web.svg";
+import Vector from "./images/Vector.png";
 
 const features = [
 	{
@@ -122,7 +123,6 @@ function FeatureItem({ title, description, gradient, icon, delay }) {
 			className={`bg-background dark:bg-background-dark rounded-3xl p-6 shadow-xl transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl overflow-hidden group`}
 			style={{ transformStyle: "preserve-3d" }}
 		>
-
 			<div className="relative z-10">
 				<div
 					className={`flex h-16 w-16 rounded-full mb-6 bg-gradient-to-br ${gradient} flex items-center justify-center transform transition-transform duration-300 group-hover:scale-110`}
@@ -138,7 +138,13 @@ function FeatureItem({ title, description, gradient, icon, delay }) {
 			</div>
 			<div
 				className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-xl`}
-			></div>
+			>
+			</div>
+			<div
+				className={`absolute inset-0 opacity-100 transition-opacity duration-300 rounded-xl`}
+			>
+				<img src={Vector} alt="" className="w-full"/>
+			</div>
 		</motion.div>
 	);
 }
