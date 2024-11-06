@@ -25,11 +25,13 @@ export const ThemeProvider = ({ children }) => {
 		const themeColorMetaTag = document.getElementById("theme-color");
 		if (isDarkMode) {
 			document.documentElement.classList.add("dark");
-			themeColorMetaTag.setAttribute("content", "#0d0d20"); // Dark mode color
-		} else {
+			if (themeColorMetaTag) {
+				themeColorMetaTag.setAttribute("content", "#0d0d20"); // Dark mode color
+			}		} else {
 			document.documentElement.classList.remove("dark");
-			themeColorMetaTag.setAttribute("content", "#F2F5FA"); // Light mode color
-		}
+			if (themeColorMetaTag) {
+				themeColorMetaTag.setAttribute("content", "#F2F5FA"); // Light mode color
+			}		}
 	}, [isDarkMode]);
 
 	// Toggle theme and update localStorage
