@@ -90,7 +90,7 @@ const TestimonialCard = ({ testimonial }) => {
 					</p>
 				</div>
 			</div>
-			<p className="text-gray-600 text-right dark:text-gray-300 mb-4 font-light leading-relaxed">
+			<p className="text-gray-700 text-right dark:text-gray-300 mb-4 font-light leading-relaxed">
 				"{testimonial.content}"
 			</p>
 			<div className="flex justify-end">
