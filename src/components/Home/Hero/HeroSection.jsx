@@ -46,7 +46,7 @@ const HeroSection = () => {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ duration: 1 }}
-			className="relative p-8 md:mt-8 flex flex-col md:flex-row items-start justify-between min-h-auto bg-background dark:bg-background-dark bg-cover bg-center"
+			className="relative p-8 md:mt-8 flex flex-col items-start justify-between min-h-auto bg-background dark:bg-background-dark bg-cover bg-center"
 		>
 			{/* Here is the SVG grid pattern */}
 			<div className="absolute inset-0 z-0 overflow-hidden">
@@ -98,7 +98,7 @@ const HeroSection = () => {
 					initial={{ y: -50, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}
 					transition={{ duration: 1 }}
-					className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-contrast dark:text-contrast-dark text-center md:text-left"
+					className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-contrast dark:text-contrast-dark text-center"
 				>
 					<span className="underline decoration-4 md:decoration-8 decoration-secondary text-secondary hover:decoration-accent">
 						Revolutionize
@@ -109,7 +109,7 @@ const HeroSection = () => {
 					initial={{ y: 50, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}
 					transition={{ duration: 1, delay: 0.5 }}
-					className="mt-4 text-contrast/85 dark:text-contrast-dark/80 text-center md:text-left leading-7 sm:leading-8 md:leading-9 font-medium lg:leading-10 xl:leading-loose 2xl:leading-relaxed text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl"
+					className="mt-4 text-contrast/85 dark:text-contrast-dark/80 text-center leading-7 sm:leading-8 md:leading-9 font-medium lg:leading-10 xl:leading-loose 2xl:leading-relaxed text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl"
 				>
 					Streamline processes, boost productivity, and drive growth with our
 					all-in-one business tool.
@@ -119,7 +119,7 @@ const HeroSection = () => {
 						initial={{ y: 50, opacity: 0 }}
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ duration: 1, delay: 0.7 }}
-						className="flex items-center space-x-2"
+						className="flex items-center justify-center space-x-2"
 					>
 						<FaCheckCircle className="text-secondary" />
 						<span className="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
@@ -130,7 +130,7 @@ const HeroSection = () => {
 						initial={{ y: 50, opacity: 0 }}
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ duration: 1, delay: 0.9 }}
-						className="flex items-center space-x-2"
+						className="flex items-center justify-center space-x-2"
 					>
 						<FaCheckCircle className="text-primary" />
 						<span className="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
@@ -141,7 +141,7 @@ const HeroSection = () => {
 						initial={{ y: 50, opacity: 0 }}
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ duration: 1, delay: 1.1 }}
-						className="flex items-center space-x-2"
+						className="flex items-center justify-center space-x-2"
 					>
 						<FaCheckCircle className="text-accent" />
 						<span className="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
@@ -152,7 +152,7 @@ const HeroSection = () => {
 						initial={{ y: 50, opacity: 0 }}
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ duration: 1, delay: 1.3 }}
-						className="flex items-center space-x-2"
+						className="flex items-center justify-center space-x-2"
 					>
 						<FaCheckCircle className="text-contrast dark:text-contrast-dark" />
 						<span className="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
@@ -161,12 +161,12 @@ const HeroSection = () => {
 					</motion.div>
 				</div>
 
-				<div className="flex flex-col md:flex-row justify-center items-center">
+				<div className="flex flex-col justify-center items-center">
 					<motion.div
 						initial={{ y: 50, opacity: 0 }}
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ duration: 1, delay: 1.5 }}
-						className="relative z-10 flex flex-col md:flex-row items-center mt-8 md:mt-0 md:space-x-8 w-full"
+						className="relative z-10 flex flex-col md:flex-row items-center mt-8 w-full justify-center"
 					>
 						<div className="flex flex-row">
 							{avatars.map((avatar, index) => (
@@ -191,7 +191,7 @@ const HeroSection = () => {
 						initial={{ y: 50, opacity: 0 }}
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ duration: 1, delay: 1 }}
-						className="space-y-4 md:space-y-0 md:space-x-4 flex flex-col md:flex-row md:justify-start mt-8 md:mt-0 w-full"
+						className="space-y-4 md:space-y-0 md:space-x-4 flex flex-col md:flex-row md:justify-center mt-8 w-full"
 					>
 						<a
 							onClick={handleJoinClick}
