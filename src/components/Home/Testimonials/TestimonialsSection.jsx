@@ -14,7 +14,7 @@ const testimonials = [
 	{
 		id: 2,
 		name: "Samantha Lee",
-		role: "Marketing Director, GrowthGenius",
+		role: "Marketing Director, Pine",
 		content:
 			"The insights we've gained through KlevaKit have propelled our marketing strategies to new heights.",
 		rating: 4,
@@ -58,12 +58,7 @@ const fanTweets = [
 		id: 4,
 		username: "@theTechie",
 		content: "KlevaKit is definitely on another level!",
-	},
-	{
-		id: 5,
-		username: "@growthHacker",
-		content: "Seriously, #KlevaKit just keeps getting better!",
-	},
+	}
 ];
 
 const TestimonialCard = ({ testimonial }) => {
@@ -82,23 +77,23 @@ const TestimonialCard = ({ testimonial }) => {
 				color: "#e6e8ec",
 			}}
 		>
-			<div className="flex items-center mb-4">
+			<div className="flex items-center mb-4 bg-slate-100 dark:bg-slate-800 p-2 rounded-xl flex-row">
 				<div className="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-blue-400 to-blue-600 text-white font-bold text-lg rounded-full">
 					{testimonial.name.charAt(0)}
 				</div>
-				<div className="ml-4">
-					<h3 className="text-lg font-semibold text-gray-800 dark:text-white">
+				<div className="ml-4 flex flex-col w-full flex-1">
+					<h3 className="text-lg text-right font-semibold text-gray-800 dark:text-white">
 						{testimonial.name}
 					</h3>
-					<p className="text-sm text-gray-500 dark:text-gray-400">
+					<p className="text-sm text-right text-gray-500 dark:text-gray-400">
 						{testimonial.role}
 					</p>
 				</div>
 			</div>
-			<p className="text-gray-600 dark:text-gray-300 mb-4 font-light leading-relaxed">
-				{testimonial.content}
+			<p className="text-gray-600 text-right dark:text-gray-300 mb-4 font-light leading-relaxed">
+				"{testimonial.content}"
 			</p>
-			<div className="flex">
+			<div className="flex justify-end">
 				{[...Array(5)].map((_, i) => (
 					<svg
 						key={i}
