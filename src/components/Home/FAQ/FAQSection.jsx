@@ -92,8 +92,7 @@ const FAQSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-xl overflow-hidden"
-        >
+          className="grid gap-0 lg:grid-cols-2 max-w-6xl divide-x-2 mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-xl overflow-hidden"        >
           {filteredFAQs.map((item, index) => (
             <FAQItem
               key={index}
