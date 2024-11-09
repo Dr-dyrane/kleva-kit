@@ -40,10 +40,49 @@ const faqData = [
       answer: "KlevaKit is designed to scale with your business. Our basic plan is perfect for small businesses and startups, while our more advanced plans cater to larger organizations.",
       category: "General",
     },
-  ];
-  
-  // Extract unique categories
-  const faqCategories = Array.from(new Set(faqData.map(item => item.category)));
-  
-  export { faqData, faqCategories };
-  
+    {
+      question: "Does KlevaKit offer analytics?",
+      answer: "Yes, KlevaKit provides a range of analytics tools to help you track your business performance, understand customer behavior, and make data-driven decisions.",
+      category: "Features",
+    },
+    {
+      question: "Can I use KlevaKit for creating landing pages?",
+      answer: "Absolutely! KlevaKit includes a no-code landing page builder that enables you to create custom landing pages for campaigns, promotions, and brand awareness.",
+      category: "Features",
+    },
+    {
+      question: "How can I contact support?",
+      answer: "You can reach our support team via email or chat through the help section in your dashboard. We are available 24/7 to assist you with any issues.",
+      category: "Support",
+    },
+    {
+      question: "What payment methods are accepted?",
+      answer: "We accept major credit cards, debit cards, and PayPal for all our subscription plans.",
+      category: "Pricing",
+    },
+    {
+      question: "Are there any discounts for annual plans?",
+      answer: "Yes, we offer a discount on our annual plans. You can save up to 20% by choosing an annual subscription.",
+      category: "Pricing",
+    },
+    {
+      question: "Is my data backed up regularly?",
+      answer: "Yes, KlevaKit performs regular data backups to ensure that your information is safe and can be restored in case of any unforeseen issues.",
+      category: "Security",
+    },
+    {
+      question: "Does KlevaKit support mobile devices?",
+      answer: "Yes, KlevaKit is fully responsive and works seamlessly on desktops, tablets, and smartphones, so you can manage your business on the go.",
+      category: "Features",
+    },
+    {
+      question: "Can I cancel my subscription anytime?",
+      answer: "Yes, you can cancel your subscription at any time from your account settings. Your subscription will remain active until the end of the billing period.",
+      category: "Pricing",
+    },
+];
+
+// Extract unique categories
+const faqCategories = Array.from(new Set(faqData.map(item => item.category)));
+
+export { faqData, faqCategories };
