@@ -4,7 +4,7 @@ import { faqData, faqCategories } from './faqData';
 
 const FAQItem = ({ item, isOpen, toggleItem }) => {
   return (
-    <div className="border-b border-gray-200 dark:border-gray-700 p-2 px-6">
+    <div className="border-b border-slate-200 dark:border-slate-700 p-2 px-6">
       <button
         className="flex justify-between items-center w-full py-4 text-left focus:outline-none"
         onClick={toggleItem}
@@ -51,7 +51,7 @@ const FAQSection = () => {
     : faqData.filter(item => item.category === activeCategory);
 
   return (
-    <section className="py-24 bg-gray-50 dark:bg-gray-900">
+    <section className="py-24 bg-slate-50 dark:bg-slate-900">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
