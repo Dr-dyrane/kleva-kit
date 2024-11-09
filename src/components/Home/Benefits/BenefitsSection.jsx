@@ -140,7 +140,7 @@ export default function BenefitsSection() {
 					</span>
 					?
 				</motion.h2>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10 mb-20">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 relative z-10 mb-20">
 					{benefits.map((benefit, index) => (
 						<BenefitItem key={index} {...benefit} />
 					))}

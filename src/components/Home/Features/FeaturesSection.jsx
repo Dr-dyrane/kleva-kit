@@ -81,9 +81,9 @@ export default function FeaturesSection() {
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="text-5xl md:text-6xl font-extrabold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary max-w-2xl"
+                    className="text-5xl md:text-6xl font-extrabold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary max-w-xl lg:max-w-3xl"
                 >
-                    Empower Your Business with Cutting-Edge Features
+                    Empower Your Business <br /> with Cutting-Edge Features
                 </motion.h1>
                 <motion.div
                     variants={containerVariants}

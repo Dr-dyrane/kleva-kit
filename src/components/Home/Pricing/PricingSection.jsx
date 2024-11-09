@@ -194,7 +194,7 @@ export default function PricingSection() {
           <span className={`ml-3 ${isYearly ? 'text-contrast dark:text-contrast-dark' : 'text-contrast/60 dark:text-contrast-dark/60'}`}>Yearly</span>
           <span className="ml-2 text-sm text-primary font-semibold">Save 20%</span>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 relative z-10">
           {pricingTiers.map((tier, index) => (
             <PricingTier
               key={index}
