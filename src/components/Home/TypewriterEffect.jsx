@@ -37,7 +37,7 @@ const TypewriterEffect = ({ texts, typeSpeed = 50, eraseSpeed = 10 }) => {
 
 	return (
 		<span
-			className="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 transition-opacity transition-transform duration-300 min-h-96"
+			className="text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 transition-opacity transition-transform duration-300 min-h-96"
 			style={{
 				opacity: displayedText ? 1 : 0.5,
 				transform: displayedText ? "translateY(0)" : "translateY(10px)",

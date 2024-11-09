@@ -192,7 +192,7 @@ export default function TestimonialsAndFanSection() {
 					initial={{ opacity: 0, y: -50 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.8 }}
-					className="text-5xl md:text-6xl font-bold text-center mb-16 text-gray-800 dark:text-white"
+					className="text-5xl md:text-6xl font-extrabold text-center mb-16 text-gray-800 dark:text-white"
 				>
 					What Our Users Are Saying
 				</motion.h2>

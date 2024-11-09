@@ -9,9 +9,9 @@ const FAQItem = ({ item, isOpen, toggleItem }) => {
         className="flex justify-between items-center w-full py-4 text-left focus:outline-none"
         onClick={toggleItem}
       >
-        <span className="text-lg font-medium text-gray-900 dark:text-white">{item.question}</span>
+        <span className="md:text-lg font-medium text-gray-900 dark:text-white">{item.question}</span>
         <svg
-          className={`w-6 h-6 text-gray-500 transform transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-4 md:w-6 h-4 md:h-6 text-gray-500 transform transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -27,7 +27,7 @@ const FAQItem = ({ item, isOpen, toggleItem }) => {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <p className="py-4 text-gray-600 font-thin text-right dark:text-gray-300">{item.answer}</p>
+            <p className="py-4 text-xs md:text-sm xl:text-base text-gray-600 font-thin text-right dark:text-gray-300">{item.answer}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -57,7 +57,7 @@ const FAQSection = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-900 dark:text-white"
+          className="text-5xl md:text-6xl font-extrabold text-center mb-12 text-gray-900 dark:text-white"
         >
           Frequently Asked Questions
         </motion.h2>
