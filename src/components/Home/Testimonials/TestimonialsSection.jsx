@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import heroSVG from "../../../assets/hero.svg"; // Import SVG file
+
 
 const testimonials = [
 	{
@@ -119,7 +121,7 @@ const TweetBubble = ({ tweet, index }) => {
 			ref={ref}
 			initial={{ opacity: 0, scale: 0.8 }}
 			animate={inView ? { opacity: 1, scale: 1 } : {}}
-			transition={{ duration: 0.5, delay: index * 0.1 }}
+			transition={{ duration: 0.3, delay: index * 0.1 }}
 			className="p-6 rounded-lg shadow-lg bg-gradient-to-r from-blue-400 to-purple-500 text-white font-semibold leading-snug transform transition hover:scale-105"
 			style={{
 				maxWidth: "100%",
@@ -127,7 +129,6 @@ const TweetBubble = ({ tweet, index }) => {
 				color: "#e6e8ec",
 			}}
 		>
-			{" "}
 			{/* Floating particles */}
 			{[...Array(20)].map((_, i) => (
 				<FloatingParticle
@@ -177,6 +178,15 @@ const FloatingParticle = ({ color }) => {
 export default function TestimonialsAndFanSection() {
 	return (
 		<section className="py-24 bg-gray-50 dark:bg-gray-900 overflow-hidden relative">
+			{/* SVG Background */}
+		<div
+			className="absolute inset-0 bg-cover bg-repeat opacity-10 z-0"
+			style={{
+				backgroundImage: `url(${heroSVG})`,
+				backgroundSize: "contain",
+			}}
+			aria-hidden="true"
+		></div>
 			<div className="container mx-auto px-4 relative">
 				<motion.h2
 					initial={{ opacity: 0, y: -50 }}
