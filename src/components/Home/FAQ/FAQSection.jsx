@@ -4,7 +4,7 @@ import { faqData, faqCategories } from './faqData';
 
 const FAQItem = ({ item, isOpen, toggleItem }) => {
   return (
-    <div className="border-b border-slate-200 dark:border-slate-700 p-2 px-6">
+<div className="border-b border-slate-200 dark:border-slate-700 p-4 px-6 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800">
       <button
         className="flex justify-between items-center w-full py-4 text-left focus:outline-none"
         onClick={toggleItem}
