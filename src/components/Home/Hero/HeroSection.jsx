@@ -117,7 +117,7 @@ const HeroSection = () => {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
                     className="text-4xl md:text-5xl  lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-contrast dark:text-contrast-dark text-center
-                    max-w-2xl  leading-loose 
+                    max-w-2xl 2xl:max-w-5xl leading-loose 
                     "
                 >
                     <span className="underline decoration-4 md:decoration-8 decoration-secondary text-secondary hover:decoration-accent">

@@ -2,9 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.5; /* Adjusts leading */
+    letter-spacing: 0.01em; /* Slightly tight tracking */
+}
+
 /* Neon Glow Effect */
 .neon-glow {
     filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
-  }
-
-  
+}
