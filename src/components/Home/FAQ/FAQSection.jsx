@@ -9,7 +9,7 @@ const FAQItem = ({ item, isOpen, toggleItem }) => {
         className="flex justify-between items-center w-full py-4 text-left focus:outline-none"
         onClick={toggleItem}
       >
-        <span className="text-lg font-medium text-gray-900 dark:text-white">{item.question}</span>
+        <span className="text-lg font-normal text-gray-900 dark:text-white">{item.question}</span>
         <svg
           className={`w-6 h-6 text-gray-500 transform transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
@@ -76,7 +76,7 @@ const FAQSection = () => {
           {faqCategories.map(category => (
             <button
               key={category}
-              className={`px-4 py-2 rounded-full text-sm font-medium ${
+              className={`px-4 py-2 rounded-full text-sm font-normal ${
                 activeCategory === category
                   ? 'bg-primary text-white'
                   : 'bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200'

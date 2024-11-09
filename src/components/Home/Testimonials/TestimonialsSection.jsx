@@ -87,7 +87,7 @@ const TestimonialCard = ({ testimonial }) => {
 					<h3 className="text-lg text-right font-semibold text-gray-800 dark:text-white">
 						{testimonial.name}
 					</h3>
-					<p className="text-sm text-right text-gray-500 dark:text-gray-400">
+					<p className="text-sm text-right text-gray-500 dark:text-gray-400 font-normal">
 						{testimonial.role}
 					</p>
 				</div>
