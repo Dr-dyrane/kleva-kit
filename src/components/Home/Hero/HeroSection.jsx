@@ -115,13 +115,16 @@ const HeroSection = () => {
 					Your Business Operations
 				</motion.h1>
 				<LogoAnimation />
-				<motion.h1
-					initial={{ opacity: 0, y: 20 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.5, delay: 0.2 }}
-				>
-					<TypewriterEffect texts={texts} />
-				</motion.h1>
+				<div className="h-48 sm:h-20 md:h-10 xl:h-auto">
+					<motion.h1
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5, delay: 0.2 }}
+					>
+						<TypewriterEffect texts={texts} />
+					</motion.h1>
+				</div>
+
 				{/* <motion.p
 					initial={{ y: 50, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}

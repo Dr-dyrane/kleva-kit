@@ -113,7 +113,7 @@ export default function BenefitsSection() {
 		<section className="py-24 bg-background dark:bg-background-dark overflow-hidden relative">
 			{/* SVG Background */}
 			<div
-				className="absolute inset-0 bg-cover bg-repeat opacity-10 z-0"
+				className="absolute inset-0 bg-cover bg-repeat opacity-20 dark:opacity-10 z-0"
 				style={{
 					backgroundImage: `url(${heroSVG})`,
 					backgroundSize: "contain",
