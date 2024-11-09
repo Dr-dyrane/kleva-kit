@@ -1,7 +1,6 @@
 // src/components/LogoAnimation.jsx
 import React from "react";
 import { motion } from "framer-motion";
-import logo from "../../../public/Klevakit.png"; // Adjust the path if necessary
 
 const LogoAnimation = () => {
 	const logoAnimation = {
@@ -42,7 +41,7 @@ const LogoAnimation = () => {
 			<div className="w-48 h-48 bg-gradient-to-br from-white to-gray-300 rounded-full flex items-center justify-center shadow-lg animate-pulse hover:animate-none">
 				<div className="w-40 h-40 flex items-center justify-center">
 					<motion.img
-						src={logo}
+src={'/Klevakit.png'}
 						alt="Pine Innovations Logo"
 						className="w-full h-full object-contain"
 						style={{ filter: "drop-shadow(0 0 8px white)" }}
