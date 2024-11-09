@@ -115,7 +115,7 @@ const HeroSection = () => {
 					Your Business Operations
 				</motion.h1>
 				<LogoAnimation />
-				<div className="h-48 sm:h-20 md:h-10 xl:h-auto">
+				<div className="h-48 sm:h-20 md:h-10 xl:h-auto min-h-[4rem]">
 					<motion.h1
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
