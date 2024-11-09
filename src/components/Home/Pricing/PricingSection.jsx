@@ -71,7 +71,7 @@ const PricingTier = ({ name, price, period, features, highlighted, description, 
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.3 }}
       whileHover={{ scale: 1.05, y: -10 }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
@@ -85,7 +85,7 @@ const PricingTier = ({ name, price, period, features, highlighted, description, 
         ${isYearly ? Math.round(price * 0.8 * 12) : price}
         <span className="text-base font-normal text-contrast/60 dark:text-contrast-dark/60">{isYearly ? '/year' : period}</span>
       </div>
-      <p className="text-sm text-contrast/80 dark:text-contrast-dark/80 mb-6 relative z-10">{description}</p>
+      <p className="text-sm font-normal text-contrast/80 dark:text-contrast-dark/80 mb-6 relative z-10">{description}</p>
       <ul className="mt-6 space-y-4 flex-grow relative z-10">
         {features.slice(0, 4).map((feature, index) => (
           <li key={index} className="flex items-center">
@@ -94,7 +94,7 @@ const PricingTier = ({ name, price, period, features, highlighted, description, 
             ) : (
               <FaTimes className="mr-2 text-red-500" />
             )}
-            <span className={feature.included ? 'text-contrast dark:text-contrast-dark' : 'text-contrast/60 dark:text-contrast-dark/60'}>
+            <span className={feature.included ? 'text-contrast font-medium dark:text-contrast-dark' : 'text-contrast/60 font-normal dark:text-contrast-dark/60'}>
               {feature.name}
             </span>
           </li>
@@ -135,7 +135,7 @@ const PricingTier = ({ name, price, period, features, highlighted, description, 
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className={`mt-8 px-6 py-3 rounded-full font-semibold text-white relative z-10 ${
+        className={`mt-8 px-6 py-3 rounded-2xl font-semibold text-white relative z-10 ${
           highlighted ? 'bg-primary hover:bg-primary-dark' : 'bg-secondary hover:bg-secondary-dark'
         } transition-colors duration-300`}
       >
