@@ -6,6 +6,8 @@ import StarRating from "../../common/StarRating";
 import { useTheme } from "../../../context/ThemeContext";
 import JoinWaitingListModal from "./JoinWaitingListModal";
 import CongratulationSplashScreen from "./CongratulationSplashScreen";
+import LogoAnimation from "../../splash/LogoAnimation";
+import TypewriterEffect from "../TypewriterEffect";
 
 const HeroSection = () => {
 	const [avatars, setAvatars] = useState([]);
@@ -40,6 +42,13 @@ const HeroSection = () => {
 
 		getAvatars();
 	}, []);
+
+	const texts = [
+		"Enhance your brand with tailored solutions.",
+		"Analyze performance with advanced metrics.",
+		"Create effective marketing strategies effortlessly.",
+		"Develop professional pitch decks with ease.",
+	];
 
 	return (
 		<motion.section
@@ -102,10 +111,18 @@ const HeroSection = () => {
 				>
 					<span className="underline decoration-4 md:decoration-8 decoration-secondary text-secondary hover:decoration-accent">
 						Revolutionize
-					</span>{" "}
+					</span>
 					Your Business Operations
 				</motion.h1>
-				<motion.p
+				<LogoAnimation />
+				<motion.h1
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.5, delay: 0.2 }}
+				>
+					<TypewriterEffect texts={texts} />
+				</motion.h1>
+				{/* <motion.p
 					initial={{ y: 50, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}
 					transition={{ duration: 1, delay: 0.5 }}
@@ -159,8 +176,7 @@ const HeroSection = () => {
 							Develop professional pitch decks with ease.
 						</span>
 					</motion.div>
-				</div>
-
+				</div> */}
 				<div className="flex flex-col justify-center items-center">
 					<motion.div
 						initial={{ y: 50, opacity: 0 }}
